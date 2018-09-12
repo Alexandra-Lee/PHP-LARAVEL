@@ -1,0 +1,132 @@
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ireland {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 15px;
+}
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.links > a {
+    color: black;
+    padding: 0px 30px;
+    margin-top: -60px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+} 
+
+/* style for teams page */
+body {
+    color: black;
+    background-image: url('./../images/ireland.jpg');
+}
+
+/* .teams {
+    background-image: url('./../images/football.jpg');
+    width: 700px;
+    height: 800px;
+} */
+.flag{
+    margin-top: -5px;
+}
+.go_back {
+    color: black; 
+    border: 1px solid black;
+}
+
+#flag_click {
+    width: 150px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    top: -5px;
+    left: 105%;
+}
+/*home*/
+
+.links_home{
+    color: black;
+    padding: 0px 30px;
+    margin-top: -80px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* home_admin */
+.flex-admin {
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    padding: 0px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.admin_title{
+    margin-top: -20px;
+}
+
+.table {
+    background: white;
+}
+
+/* user create */
+.user_form {
+    background: white;
+}
+
+.submit_user{
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
