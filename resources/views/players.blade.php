@@ -49,9 +49,9 @@
                     <td> {{$player->height}} </td>
                 </tr>
                 @endforeach
-                {{$players->links()}}
                 @else <p> No players are listed. </p>
                 @endif
            </tbody>
         </table>
+        {{$players->links()}}
 @endsection

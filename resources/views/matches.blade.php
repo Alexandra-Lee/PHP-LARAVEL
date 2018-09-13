@@ -3,9 +3,9 @@
 @section('content')
 
     <div class="container">
-        @if (Auth::user() && Auth::user()->type == 'default')
+
         <a href="/" class="btn btn-default go_back">Go Back</a>
-        @endif
+        
         @if (Auth::user() && Auth::user()->type == 'admin')
             <a href="/admin" class="btn btn-default go_back">Back to Admin</a>
             <a href="/matches/create" class="btn btn-primary">Add Match</a>

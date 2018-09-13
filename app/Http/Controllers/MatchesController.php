@@ -21,11 +21,11 @@ class MatchesController extends Controller
     public function __construct()
     {
         $this->middleware('auth', ['except' =>['teams', 'team', 'matches', 'players', 'welcome', 'home']]);
-    } 
+    }
 
     public function index()
     {
-        $matches = Match::orderBy('date', 'asc')->paginate(20);
+        $matches = Match::orderBy('date', 'asc')->paginate(5);
         return view('matches')->with('matches', $matches);
     }
 
@@ -48,7 +48,7 @@ class MatchesController extends Controller
     public function store(Request $request)
     {
         $validation = $request->validate([
-        
+
             'team1' => 'required',
             'team2' => 'required',
             'date' => 'required',
@@ -57,12 +57,12 @@ class MatchesController extends Controller
         ]);
 
     //create new match in database
-    $match = new Match;       
+    $match = new Match;
 
-    $match->team1 = $request->input('team1');    
-    $match->team2 = $request->input('team2');        
-    $match->date = $request->input('date');        
-    $match->time = $request->input('time'); 
+    $match->team1 = $request->input('team1');
+    $match->team2 = $request->input('team2');
+    $match->date = $request->input('date');
+    $match->time = $request->input('time');
     $match->save();
 
     return redirect()->route('matches')->with('success', 'A new match has been added.');
@@ -111,15 +111,15 @@ class MatchesController extends Controller
                 'goals2' => '',
             ]);
 
-        $match = Match::find($id);  
-             
-        $match->team1 = $request->input('team1');    
-        $match->team2 = $request->input('team2');        
-        $match->date = $request->input('date');        
-        $match->time = $request->input('time'); 
-        $match->goals1 = $request->input('goals1'); 
-        $match->goals2 = $request->input('goals2'); 
-        
+        $match = Match::find($id);
+
+        $match->team1 = $request->input('team1');
+        $match->team2 = $request->input('team2');
+        $match->date = $request->input('date');
+        $match->time = $request->input('time');
+        $match->goals1 = $request->input('goals1');
+        $match->goals2 = $request->input('goals2');
+
         $match->save();
 
         return redirect()->route('matches')->with('success', 'Match ' . $match->match_id . ' has been updated.');

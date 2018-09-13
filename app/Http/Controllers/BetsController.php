@@ -13,7 +13,7 @@ class BetsController extends Controller
      */
     public function index()
     {
-        $bets = Bet::orderBy('match_id', 'asc')->paginate(20);
+        $bets = Bet::orderBy('match_id', 'asc')->paginate(15);
         return view('bets')->with('bets', $bets);
     }
 
@@ -36,17 +36,17 @@ class BetsController extends Controller
     public function store(Request $request)
     {
         $validation = $request->validate([
-        
+
             'country' => 'required',
             'amount' => 'required',
         ]);
 
     //create new bet in database
-    $bet = new Bet;  
-    
-    $bet->country = $request->input('country');    
-    $bet->amount = $request->input('amount');        
-    
+    $bet = new Bet;
+
+    $bet->country = $request->input('country');
+    $bet->amount = $request->input('amount');
+
     $bet->save();
 
     return redirect()->route('matches')->with('success', 'You just placed a bet!');
