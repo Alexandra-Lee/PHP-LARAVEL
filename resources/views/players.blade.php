@@ -2,19 +2,28 @@
 
 @section('content')
     <div class="container teams">
-    
-        <a href="/" class="btn btn-default go_back">Go Back</a> 
-      
-    @if (Auth::user() && Auth::user()->type == 'admin') 
-        <a href="/admin" class="btn btn-default go_back">Back to Admin</a>    
+
+        <a href="/" class="btn btn-default go_back">Go Back</a>
+
+    @if (Auth::user() && Auth::user()->type == 'admin')
+        <a href="/admin" class="btn btn-default go_back">Back to Admin</a>
         <a href="/players/create" class="btn btn-primary">Add a Player</a>
         <a href="/players//edit" class="btn btn-primary">Edit Player</a>
         <a href="/players/delete" class="btn btn-primary">Delete Player</a>
         <br>
-    @endif    
+    @endif
     <br>
     <br>
-    <h1>The Olympians</h1>
+    <div class="allOlympians">
+        <h1>The Olympians</h1>
+    </div>
+    <div class="olympians">
+        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
+        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
+        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
+        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
+        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
+    </div>
     <br>
     <table class="table table-striped">
             <thead>
@@ -42,7 +51,7 @@
                 @endforeach
                 {{$players->links()}}
                 @else <p> No players are listed. </p>
-                @endif 
+                @endif
            </tbody>
         </table>
 @endsection

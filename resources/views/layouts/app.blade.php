@@ -26,7 +26,6 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <p>The 65th Olympiad - 2164 -<span class="ireland">Aviva Stadium, Ireland</p>
                 </a>
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -73,7 +72,7 @@
 
         <main class="py-4">
             <div class="container">
-            @include('include.messages')    
+            @include('include.messages')
             @yield('content')
             </div>
         </main>

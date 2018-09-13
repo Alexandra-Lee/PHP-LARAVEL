@@ -21,7 +21,7 @@ class TeamsTableSeeder extends Seeder
             'goals' => 0,
             'wins' => 0,
             'total_matches' => 0]);
-        
+
         DB::table('teams')->insert([
             'id' => 2,
             'team_name' => "Les Revolutionaires",
@@ -31,7 +31,7 @@ class TeamsTableSeeder extends Seeder
             'red_cards' => 0,
             'goals' => 0,
             'wins' => 0,
-            'total_matches' => 0]);    
+            'total_matches' => 0]);
 
         DB::table('teams')->insert([
             'id' => 3,
@@ -43,7 +43,7 @@ class TeamsTableSeeder extends Seeder
             'goals' => 0,
             'wins' => 0,
             'total_matches' => 0]);
-        
+
         DB::table('teams')->insert([
             'id' => 4,
             'team_name' => "Islanders",
@@ -53,7 +53,7 @@ class TeamsTableSeeder extends Seeder
             'red_cards' => 0,
             'goals' => 0,
             'wins' => 0,
-            'total_matches' => 0]);         
+            'total_matches' => 0]);
 
         DB::table('teams')->insert([
             'id' => 5,
@@ -65,7 +65,7 @@ class TeamsTableSeeder extends Seeder
             'goals' => 0,
             'wins' => 0,
             'total_matches' => 0]);
-        
+
         DB::table('teams')->insert([
             'id' => 6,
             'team_name' => "Brazil Nuts",
@@ -75,8 +75,8 @@ class TeamsTableSeeder extends Seeder
             'red_cards' => 0,
             'goals' => 0,
             'wins' => 0,
-            'total_matches' => 0]);    
-                
+            'total_matches' => 0]);
+
         DB::table('teams')->insert([
             'id' => 7,
             'team_name' =>"The Dancers",
@@ -87,17 +87,17 @@ class TeamsTableSeeder extends Seeder
             'goals' => 0,
             'wins' => 0,
             'total_matches' => 0]);
-        
+
         DB::table('teams')->insert([
             'id' => 8,
-            'team_name' => "Toffs",
+            'team_name' => "Royaltea",
             'country' => "United Kingdom",
             'flag' => "images/united-kingdom.png",
             'yellow_cards' => 0,
             'red_cards' => 0,
             'goals' => 0,
             'wins' => 0,
-            'total_matches' => 0]);    
+            'total_matches' => 0]);
 
         DB::table('teams')->insert([
             'id' => 9,
@@ -109,7 +109,7 @@ class TeamsTableSeeder extends Seeder
             'goals' => 0,
             'wins' => 0,
             'total_matches' => 0]);
-                    
+
         DB::table('teams')->insert([
             'id' => 10,
             'team_name' => "Geese and Gander",
@@ -119,7 +119,7 @@ class TeamsTableSeeder extends Seeder
             'red_cards' => 0,
             'goals' => 0,
             'wins' => 0,
-            'total_matches' => 0]);    
+            'total_matches' => 0]);
 
             DB::table('teams')->insert([
                 'id' => 11,
@@ -132,7 +132,7 @@ class TeamsTableSeeder extends Seeder
                 'goals' => 0,
                 'wins' => 0,
                 'total_matches' => 0]);
-            
+
             DB::table('teams')->insert([
                 'id' => 12,
                 'team_name' => "Sony Boom",
@@ -142,8 +142,8 @@ class TeamsTableSeeder extends Seeder
                 'red_cards' => 0,
                 'goals' => 0,
                 'wins' => 0,
-                'total_matches' => 0]); 
-                
+                'total_matches' => 0]);
+
             DB::table('teams')->insert([
                 'id' => 13,
                 'team_name' =>"Core Players",
@@ -154,7 +154,7 @@ class TeamsTableSeeder extends Seeder
                 'goals' => 0,
                 'wins' => 0,
                 'total_matches' => 0]);
-            
+
             DB::table('teams')->insert([
                 'id' => 14,
                 'team_name' => "Rainbow Team",
@@ -164,7 +164,7 @@ class TeamsTableSeeder extends Seeder
                 'red_cards' => 0,
                 'goals' => 0,
                 'wins' => 0,
-                'total_matches' => 0]);    
+                'total_matches' => 0]);
 
             DB::table('teams')->insert([
                 'id' => 15,
@@ -176,6 +176,6 @@ class TeamsTableSeeder extends Seeder
                 'goals' => 0,
                 'wins' => 0,
                 'total_matches' => 0]);
-             
+
     }
 }

@@ -9,6 +9,7 @@
     font-size: 20px;
     margin-left: 15px;
 }
+
 .position-ref {
     position: relative;
 }
@@ -31,7 +32,7 @@
     text-align: center;
 }
 
-.links > a {
+.links>a {
     color: black;
     padding: 0px 30px;
     margin-top: -60px;
@@ -44,7 +45,7 @@
 
 .m-b-md {
     margin-bottom: 30px;
-} 
+}
 
 /* style for teams page */
 body {
@@ -57,11 +58,43 @@ body {
     width: 700px;
     height: 800px;
 } */
-.flag{
+.flag {
     margin-top: -5px;
 }
+
+.across {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.flags_across {
+    background-size: cover;
+    vertical-align: middle;
+    height: 130px;
+    width: 150px;
+    margin: 0;
+}
+
+.allOlympians {
+    text-align: center;
+}
+
+.olympians {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.matchesTitle {
+    text-align: center;
+}
+
+.country_name {
+    padding-top: 45px;
+}
+
 .go_back {
-    color: black; 
+    color: black;
     border: 1px solid black;
 }
 
@@ -70,6 +103,7 @@ body {
     height: 100px;
     background-repeat: no-repeat;
 }
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -86,9 +120,10 @@ body {
     top: -5px;
     left: 105%;
 }
+
 /*home*/
 
-.links_home{
+.links_home {
     color: black;
     padding: 0px 30px;
     margin-top: -80px;
@@ -112,7 +147,7 @@ body {
     text-transform: uppercase;
 }
 
-.admin_title{
+.admin_title {
     margin-top: -20px;
 }
 
@@ -125,8 +160,7 @@ body {
     background: white;
 }
 
-.submit_user{
+.submit_user {
     margin-top: -5px;
     margin-bottom: 5px;
 }
-
