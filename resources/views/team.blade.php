@@ -8,17 +8,16 @@
         @if (Auth::user() && Auth::user()->type == 'admin')
             <a href="/admin" class="btn btn-default go_back">Back to Admin</a>
             <a href="/players/create" class="btn btn-primary">Add a Player</a>
-            <a href="/players/edit" class="btn btn-primary">Edit Player</a>
-            <a href="/players/delete" class="btn btn-primary">Delete a Player</a>
+
         <br>
         @endif
-    <br>
-    <br>
-            <div class="row across">
-                <div class="flags_across" style="background-image: url('{{ asset($team->flag) }}')"></div>
-                <h1 class="country_name">{{$team->team_name}}</h1>
-                <div class="flags_across" style="background-image: url('{{ asset($team->flag) }}')"></div>
-            </div>
+        <br>
+        <br>
+        <div class="row across">
+            <div class="flags_across" style="background-image: url('{{ asset($team->flag) }}')"></div>
+            <h1 class="country_name">{{$team->team_name}}</h1>
+            <div class="flags_across" style="background-image: url('{{ asset($team->flag) }}')"></div>
+        </div>
 
                     <br/>
                     <br/>
@@ -43,6 +42,8 @@
                             <td>{{$player->age}}</td>
                             <td>{{$player->height}}</td>
                             <td>{{$player->weight}}</td>
+                            <td><a href="/players/edit" class="btn btn-primary">Edit Player</a></td>
+                            <td><a href="/players/delete" class="btn btn-primary">Delete Player</a></td>
                         </tr>
                         </tbody>
                         @endforeach

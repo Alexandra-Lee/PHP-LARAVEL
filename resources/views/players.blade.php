@@ -15,6 +15,7 @@
     <div class="allOlympians">
         <h1>The Olympians</h1>
         <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
+        <p><h4>(Click on player name to EDIT or DELETE)</h4></p>
     </div>
 
     <br>
@@ -40,10 +41,9 @@
                     <td> {{$player->age}} </td>
                     <td> {{$player->weight}} </td>
                     <td> {{$player->height}} </td>
-                    @if (Auth::user() && Auth::user()->type == 'admin')
-                    <td><a href="/players//edit" class="btn btn-primary">Edit Player</a></td>
-                    <td><a href="/players/delete" class="btn btn-primary">Delete Player</a></td>
-                    @endif
+                    <td> {{$player->yellow_cards}} </td>
+                    <td> {{$player->red_cards}} </td>
+                    <td> {{$player->goals}} </td>
                 </tr>
                 @endforeach
                 @else <p> No players are listed. </p>

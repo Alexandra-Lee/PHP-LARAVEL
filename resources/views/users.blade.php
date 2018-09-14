@@ -12,6 +12,7 @@
     <br>
     <h1>Registry of Users</h1>
     <br>
+    <h5>(Click on user id or name to edit or delete.)</h5>
     <table class="table table-striped">
             <thead>
                 <tr>
@@ -24,21 +25,17 @@
             </thead>
             <tbody>
                 @if (count($users) > 0)
-                @foreach($users as $user)
-                <tr>
-                    <td><a href="users/{{$user->id}}">{{$user->id}}</a></td>
-                    <td><a href="users/{{$user->id}}">{{$user->name}}</a></td>
-                    <td> {{$user->type}} </td>
-                    <td> {{$user->email}} </td>
-                    <!-- <td> {{$user->password}} </td> -->
-                    <td><a href="/teams/edit" class="btn btn-primary">Edit User</a></td>
-                    <td><a href="/teams/delete" class="btn btn-primary">Delete User</a></td>
-                </div>
-                </tr>
-                @endforeach
+                    @foreach($users as $user)
+                        <tr>
+                            <td><a href="/users/{{ $user->id }}">{{ $user->id }}</a></td>
+                            <td><a href="/users/{{ $user->id }}">{{ $user->name }}</a></td>
+                            <td> {{ $user->type }} </td>
+                            <td> {{ $user->email }} </td>
+                        </tr>
+                    @endforeach
                 {{$users->links()}}
-                @else <p> There are no users listed. </p>
                 @endif
+                @else <p> There are no users listed. </p>
            </tbody>
         </table>
     @endif

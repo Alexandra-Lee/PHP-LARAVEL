@@ -23,7 +23,7 @@
                 <a href="./matches">MATCHES</a>
                 <a href="./teams">TEAMS</a>
                 <a href="./players">PLAYERS</a>
-                <a href="./bets">PLACE A BET</a>
+                <a href="./bets">BETS!</a>
             </div>
         </div>
 </div>

@@ -10,7 +10,7 @@
             <a href="./matches">MATCHES</a>
             <a href="./teams">TEAMS</a>
             <a href="./players">PLAYERS</a>
-            <a href="/login">PLACE A BET</a>
+            <a href="/login">BETS!</a>
         </div>
     </div>
-@endsection 
+@endsection

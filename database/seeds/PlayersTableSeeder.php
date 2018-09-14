@@ -27,7 +27,6 @@ class PlayersTableSeeder extends Seeder
 
         DB::table('players')->insert([
             'team_id' => 2,
-
             'team_name' =>"Les Revolutionaires",
             'country' => "France",
             'player_name' => "Jean Valjean",

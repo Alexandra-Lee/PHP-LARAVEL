@@ -7,7 +7,7 @@
         <a href="/" class="btn btn-default go_back">Go Back</a>
         @endif
         @if (Auth::user() && Auth::user()->type == 'admin')
-            <a href="/" class="btn btn-default go_back">Go back</a>
+            <a href="/" class="btn btn-default go_back">Go to Site</a>
             <a href="/admin" class="btn btn-default go_back">Back to Admin</a>
             <a href="/matches/create" class="btn btn-primary">Add Match</a>
             <br>
@@ -17,6 +17,9 @@
         <h1>MATCHES</h1>
     </div>
     <br>
+        @if (Auth::user() && Auth::user()->type == 'admin')
+        <h4>(Click on match id to EDIT or DELETE)</h4>
+        @endif
     <table class="table table-striped">
             <thead>
                 <tr>
@@ -48,10 +51,6 @@
                                 <br/><br/>
                                 <a href="/bets/edit" class="btn btn-primary">Edit My Bet</a>
                             @endif
-                            @if (Auth::user()->type == 'admin')
-                                <a href="/matches/edit" class="btn btn-primary">Edit Match</a>
-                                <a href="/matches/delete" class="btn btn-primary">Delete Match</a>
-                            @endif
                         </td>
                     </tr>
             </tbody>
@@ -64,4 +63,5 @@
     @else <p> There are no matches listed. </p>
     @endif
     </div>
+
 @endsection

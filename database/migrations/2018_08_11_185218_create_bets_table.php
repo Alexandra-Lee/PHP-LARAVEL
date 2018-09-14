@@ -21,6 +21,11 @@ class CreateBetsTable extends Migration
             $table->integer('amount');
             $table->timestamps();
         });
+
+        Schema::table('bets', function($table)
+        {
+            $table->dropColumn('id');
+        });
     }
 
     /**

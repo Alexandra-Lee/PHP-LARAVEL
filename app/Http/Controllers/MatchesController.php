@@ -25,7 +25,7 @@ class MatchesController extends Controller
 
     public function index()
     {
-        $matches = Match::orderBy('date', 'asc')->paginate(5);
+        $matches = Match::orderBy('date', 'asc')->paginate(4);
         return view('matches')->with('matches', $matches);
     }
 

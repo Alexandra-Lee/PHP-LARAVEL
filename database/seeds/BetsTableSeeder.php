@@ -12,18 +12,18 @@ class BetsTableSeeder extends Seeder
     public function run()
     {
         DB::table('bets')->insert([
-        'id' => 1,
+        //'id' => 1,
         'match_id' => 1,
-        'country' => "Italy",
+        'country' => "France",
         'amount' => 50,
         ]);
-        
+
         DB::table('bets')->insert([
-        'id' => 2,
+        //'id' => 2,
         'match_id' => 2,
-        'country' => "South Korea",
+        'country' => "Fiji Islands",
         'amount' => 10,
         ]);
-        
+
     }
 }

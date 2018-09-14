@@ -36,20 +36,20 @@ class BetsController extends Controller
     public function store(Request $request)
     {
         $validation = $request->validate([
-
+            'match_id' => 'required',
             'country' => 'required',
             'amount' => 'required',
         ]);
 
     //create new bet in database
     $bet = new Bet;
-
+    $bet->match_id = $request->input('match_id');
     $bet->country = $request->input('country');
     $bet->amount = $request->input('amount');
 
     $bet->save();
 
-    return redirect()->route('matches')->with('success', 'You just placed a bet!');
+    return redirect()->route('matches')->with('success', 'You just placed a bet for ' . $bet->country . '!');
     }
 
     /**
