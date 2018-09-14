@@ -8,22 +8,15 @@
     @if (Auth::user() && Auth::user()->type == 'admin')
         <a href="/admin" class="btn btn-default go_back">Back to Admin</a>
         <a href="/players/create" class="btn btn-primary">Add a Player</a>
-        <a href="/players//edit" class="btn btn-primary">Edit Player</a>
-        <a href="/players/delete" class="btn btn-primary">Delete Player</a>
         <br>
     @endif
     <br>
     <br>
     <div class="allOlympians">
         <h1>The Olympians</h1>
-    </div>
-    <div class="olympians">
-        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
-        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
-        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
-        <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
         <p class="logo"><img src="{{asset('images/logo.jpg')}}" alt="Irish Games Logo"/></p>
     </div>
+
     <br>
     <table class="table table-striped">
             <thead>
@@ -47,6 +40,10 @@
                     <td> {{$player->age}} </td>
                     <td> {{$player->weight}} </td>
                     <td> {{$player->height}} </td>
+                    @if (Auth::user() && Auth::user()->type == 'admin')
+                    <td><a href="/players//edit" class="btn btn-primary">Edit Player</a></td>
+                    <td><a href="/players/delete" class="btn btn-primary">Delete Player</a></td>
+                    @endif
                 </tr>
                 @endforeach
                 @else <p> No players are listed. </p>

@@ -3,10 +3,11 @@
 @section('content')
 
     <div class="container">
-
+        @if (Auth::user() && Auth::user()->type == 'default')
         <a href="/" class="btn btn-default go_back">Go Back</a>
-        
+        @endif
         @if (Auth::user() && Auth::user()->type == 'admin')
+            <a href="/" class="btn btn-default go_back">Go back</a>
             <a href="/admin" class="btn btn-default go_back">Back to Admin</a>
             <a href="/matches/create" class="btn btn-primary">Add Match</a>
             <br>
@@ -32,10 +33,8 @@
                     @foreach ($matches as $match)
                     <tr>
                         <td><a href="/matches/{{$match->match_id}}">{{$match->match_id}}</a></td>
-                        <td>{{$match->team1}}
-                        VS.
-                        {{$match->team2}} <!-- <img src="" width="60" height="50"/> -->
-                        </td>
+
+                        <td>{{$match->team1}} VS. {{$match->team2}}</td>
 
                         <td>{{$match->date}}</td>
 
@@ -47,7 +46,11 @@
                             @if (Auth::user()->type == 'default')
                                 <a href="/bets/create" class="btn btn-primary">Add My Bet</a>
                                 <br/><br/>
-                                <a href="/bets//edit" class="btn btn-primary">Edit My Bet</a>
+                                <a href="/bets/edit" class="btn btn-primary">Edit My Bet</a>
+                            @endif
+                            @if (Auth::user()->type == 'admin')
+                                <a href="/matches/edit" class="btn btn-primary">Edit Match</a>
+                                <a href="/matches/delete" class="btn btn-primary">Delete Match</a>
                             @endif
                         </td>
                     </tr>

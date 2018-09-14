@@ -76,15 +76,6 @@ body {
     margin: 0;
 }
 
-.allOlympians {
-    text-align: center;
-}
-
-.olympians {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .matchesTitle {
     text-align: center;
 }

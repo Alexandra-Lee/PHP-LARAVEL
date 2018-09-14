@@ -7,8 +7,6 @@
     @if (Auth::user() && Auth::user()->type == 'admin')
         <a href="/admin" class="btn btn-default go_back">Back to Admin</a>
         <a href="/teams/create" class="btn btn-primary">Add a Team</a>
-        <a href="/teams/edit" class="btn btn-primary">Edit Team</a>
-        <a href="/teams/delete" class="btn btn-primary">Delete Team</a>
         <br>
     @endif
     <br>
@@ -32,6 +30,10 @@
                 <div class="col-sm flag">
                     <a href="teams/{{$team->id}}"><img src="{{ $team->flag }}" width="60" height="50"
                     /></a>
+                </div>
+                <div class="col-sm team_buttons">
+                    <a href="/teams/edit" class="btn btn-primary">Edit Team</a>
+                    <a href="/teams/delete" class="btn btn-primary">Delete Team</a>
                 </div>
             </li>
         </div>

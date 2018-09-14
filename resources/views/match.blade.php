@@ -2,9 +2,11 @@
 
 @section('content')
     <div class="container">
+    @if (Auth::user() && Auth::user()->type == 'default')
         <a href="/matches" class="btn btn-default go_back">Back to All Matches</a>
-    @if (Auth::user() && Auth::user()->type == 'admin')     
-        
+    @endif
+    @if (Auth::user() && Auth::user()->type == 'admin')
+        <a href="/" class="btn btn-default go_back">Go to site</a>
         <a href="/admin" class="btn btn-default go_back">Back to Admin</a>
         <a href="/matches/{{$match->match_id}}/edit" class="btn btn-primary">Edit Match</a>
         <br/><br/>
@@ -37,5 +39,5 @@
                 <td> {{$match->goals1}} </td>
                 <td> {{$match->goals2}} </td>
             </tr>
-                
+
 @endsection
